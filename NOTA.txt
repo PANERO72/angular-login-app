@@ -1,5 +1,7 @@
-** Éste proyecto arrojaba un error de Decoradores experimentales de Angular en el componente "Registro".
+﻿** Éste proyecto arrojaba un error de Decoradores experimentales de Angular en el componente "Registro".
 
 ** He deshabilitado la opción 'experimentalDecorators' en las extensiones "ide-typescript" y "ide-typescript" de Atom para todos los proyectos.
 
 ** Hay que abrir las extensiones "ide-typescript" y "ide-typescript" en el propio Atom, buscar en el código de las extensiones: !compilerOptions.experimentalDecorators y descomentar los bloques de código en los que aparezcan esto !compilerOptions.experimentalDecorators.
+
+** El manejo del inicio de sesión y del registro de usuarios está echo en Firebase.
