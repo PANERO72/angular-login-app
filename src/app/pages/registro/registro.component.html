@@ -1,0 +1,42 @@
+<div class="limiter animated fadeIn">
+  <div class="container-login100">
+    <div class="wrap-login100 p-t-50 p-b-90">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="login100-form validate-form flex-sb flex-w">
+        <span class="login100-form-title p-b-51">Crear nueva cuenta</span>
+        <div class="textoErrorRegister1">
+            <span *ngIf="f.submitted && f.controls['email'].errors" id="emailError" class="text-danger animated fadeIn">El Correo electrónico es obligatorio</span>
+        </div>
+        <div class="wrap-input100 m-b-32">
+            <input class="input100" type="email" name="email" [(ngModel)]="usuario.email" required email placeholder="Correo electrónico" />
+            <span class="focus-input100"></span>
+        </div>
+        <div class="textoErrorRegister2">
+          <span *ngIf="f.submitted && f.controls['nombre'].errors" class="text-danger animated fadeIn">El Nombre es obligatorio y de almenos 8 caracteres</span>
+        </div>
+        <div class="wrap-input100 m-b-32">
+            <input class="input100" type="text" name="nombre" [(ngModel)]="usuario.name" required minlength="8" placeholder="Nombre y apellidos" />
+            <span class="focus-input100"></span>
+        </div>
+        <div class="textoErrorRegister3">
+          <span *ngIf="f.submitted && f.controls['password'].errors" class="text-danger animated fadeIn">La Contraseña es obligatoria y de almenos 8 caracteres</span>
+        </div>
+        <div class="wrap-input100 m-b-16">
+            <input class="input100" type="password" name="password" [(ngModel)]="usuario.password" required minlength="8" placeholder="Contraseña" />
+            <span class="focus-input100"></span>
+        </div>
+        <div class="flex-sb-m w-full p-t-3 p-b-24">
+            <div class="contact100-form-checkbox">
+                <input [(ngModel)]="recordarme" class="input-checkbox100" id="ckb1" type="checkbox" name="rememberme" />
+                <label class="label-checkbox100" for="ckb1">Recordar mi usuario</label>
+            </div>
+            <div>
+                <a routerLink="/login" class="txt1">¿Ya tiene cuenta? / Ingresar</a>
+            </div>
+        </div>
+        <div class="container-login100-form-btn m-t-17">
+            <button class="login100-form-btn" type="submit">Crear Cuenta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
