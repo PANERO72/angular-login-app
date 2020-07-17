@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UsuarioModel } from '../models/usuario.model';
+import { config } from "./../config/config";
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apikey = 'AIzaSyCAvRsOB4z5ZIN8SW7N6AjFq1hcjBCkevw';
+  private apikey = config.API_KEY;
 
   usuarioToken: string;
 

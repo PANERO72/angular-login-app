@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioModel } from '../../models/usuario.model';
-import { EMAIL_USER } from '../../config/config';
 import { NgForm } from "@angular/forms";
 import { AuthService } from "../../services/auth.service";
+import { config } from "./../../config/config";
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
@@ -21,7 +21,7 @@ export class RegistroComponent implements OnInit {
   ngOnInit() {
     this.usuario = new UsuarioModel();
 
-    //this.usuario.email = EMAIL_USER;
+    //this.usuario.email = config.EMAIL_USER;
   }
 
   onSubmit(form: NgForm) {
