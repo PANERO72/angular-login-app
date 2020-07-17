@@ -1,1 +1,1 @@
-export const EMAIL_USER = 'panerootero@gmail.com';
+export const EMAIL_USER = 'SU_CORREO';
